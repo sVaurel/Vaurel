@@ -66,12 +66,12 @@ export default function Home() {
       <section id="contact" className="contact section">
         <p className="eyebrow">LET&apos;S WORK</p>
         <h2>HAVE A PROJECT<br /><span>IN MIND?</span></h2>
-        <a className="email" href="mailto:your@email.com">your@email.com ↗</a>
+        <a className="email" href="mailto:vaurelhq@gmail.com">vaurelhq@gmail.com ↗</a>
       </section>
 
       <footer>
         <span>© 2026 VAUREL</span>
-        <span>CREATIVE VIDEO EDITING</span>
+        <span>EDITOR | CREATIVE COMMENTARY</span>
       </footer>
     </main>
   );
