@@ -37,7 +37,6 @@ button { font: inherit; }
 }
 .nav-left { display: flex; gap: 30px; align-items: center; }
 .nav-left a, .nav-contact {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: .12em;
@@ -178,11 +177,7 @@ footer {
 @media (max-width: 600px) {
   .nav { height: 70px; padding: 0 5vw; }
   .nav-left { gap: 13px; }
-  .nav-left a, .nav-contact {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 8px;
-    letter-spacing: .09em;
-  }
+  .nav-left a, .nav-contact { font-size: 8px; letter-spacing: .09em; }
   .home-hero { padding: 60px 5vw 70px; }
   .home-copy h1, .inner-hero h1 { font-size: clamp(58px, 18vw, 100px); }
   .home-actions { align-items: flex-start; flex-direction: column; gap: 18px; }
