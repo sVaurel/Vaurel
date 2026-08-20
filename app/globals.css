@@ -107,7 +107,14 @@ h1 span, h2 span { color: #777; }
 .theme-design { --project-bg: #f3f3f3; --project-fg: #080808; --project-accent: #777; }
 .projects-page .nav { border-color: color-mix(in srgb, var(--project-fg) 18%, transparent); }
 .projects-stage { flex: 1; padding: 5vw 4vw 7vw; }
-.project-menu { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.project-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
 .project-tab {
   border: 1px solid color-mix(in srgb, var(--project-fg) 25%, transparent);
   background: transparent;
