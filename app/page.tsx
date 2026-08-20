@@ -1,77 +1,59 @@
-const projects = [
-  { title: "PROJECT 01", type: "VIDEO EDIT", year: "2026" },
-  { title: "PROJECT 02", type: "MOTION / VFX", year: "2026" },
-  { title: "PROJECT 03", type: "SHORT FORM", year: "2026" },
-];
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main>
-      <nav className="nav">
-        <a className="logo" href="#">VAUREL<span>.</span></a>
-        <div className="navLinks">
-          <a href="#work">WORK</a>
-          <a href="#about">ABOUT</a>
-          <a href="#contact">CONTACT</a>
-        </div>
-      </nav>
+    <main className="site-shell home-page">
+      <header className="nav">
+        <nav className="nav-left" aria-label="Primary navigation">
+          <Link href="/">HOME</Link>
+          <Link href="/projects">PROJECTS</Link>
+          <Link href="/shop">SHOP</Link>
+        </nav>
+        <Link className="nav-contact" href="/contact">GET IN TOUCH</Link>
+      </header>
 
-      <section className="hero">
-        <p className="eyebrow">VIDEO EDITOR / CREATIVE</p>
-        <h1>TURNING<br /><span>FOOTAGE</span><br />INTO IMPACT.</h1>
-        <div className="heroBottom">
-          <p>Creative editing, motion, and visual storytelling built to make people stop scrolling.</p>
-          <a className="button" href="#work">VIEW MY WORK ↘</a>
+      <section className="home-hero" aria-label="VAUREL home">
+        <div className="home-copy">
+          <p className="eyebrow">VAUREL / CREATIVE WORK</p>
+          <h1>CREATIVE<br /><span>COMMENTARY.</span></h1>
+          <p className="home-description">
+            Editing, music, games, and design — built with an emphasis on strong ideas,
+            clean visuals, and personality.
+          </p>
+          <div className="home-actions">
+            <Link className="primary-button" href="/projects">VIEW PROJECTS ↘</Link>
+            <Link className="text-link" href="/contact">GET IN TOUCH ↗</Link>
+          </div>
+        </div>
+
+        <div className="channel-card">
+          <Image
+            src="/vaurel-youtube.png"
+            alt="VAUREL YouTube channel"
+            width={607}
+            height={255}
+            priority
+            className="channel-image"
+          />
         </div>
       </section>
 
-      <section id="work" className="section">
-        <div className="sectionHead">
-          <p className="eyebrow">SELECTED WORK</p>
-          <span>03 PROJECTS</span>
-        </div>
-        <div className="grid">
-          {projects.map((project, i) => (
-            <article className="project" key={project.title}>
-              <div className="projectVisual">
-                <span>0{i + 1}</span>
-                <div className="play">▶</div>
-              </div>
-              <div className="projectInfo">
-                <div>
-                  <h2>{project.title}</h2>
-                  <p>{project.type}</p>
-                </div>
-                <span>{project.year}</span>
-              </div>
-            </article>
-          ))}
-        </div>
-        <p className="hint">Replace the project cards with your actual edits when you're ready.</p>
-      </section>
-
-      <section id="about" className="about section">
-        <p className="eyebrow">ABOUT</p>
-        <div>
-          <h2>I EDIT WITH<br /><span>PURPOSE.</span></h2>
+      <section className="home-intro">
+        <p className="eyebrow">WHAT I DO</p>
+        <div className="intro-grid">
+          <h2>IDEAS INTO<br /><span>IDENTITY.</span></h2>
           <p>
-            I&apos;m VAUREL, a video editor focused on high-quality gaming,
-            commentary, short-form, and cinematic content. I care about
-            pacing, sound design, motion, and the small details that make an
-            edit feel intentional.
+            VAUREL is a creative space for video editing, music, game development,
+            and visual design. The site is structured so new work, case studies,
+            motion graphics, and interactive pieces can be added without rebuilding it.
           </p>
         </div>
       </section>
 
-      <section id="contact" className="contact section">
-        <p className="eyebrow">LET&apos;S WORK</p>
-        <h2>HAVE A PROJECT<br /><span>IN MIND?</span></h2>
-        <a className="email" href="mailto:vaurelhq@gmail.com">vaurelhq@gmail.com ↗</a>
-      </section>
-
       <footer>
         <span>© 2026 VAUREL</span>
-        <span>EDITOR | CREATIVE COMMENTARY</span>
+        <span>CREATIVE VIDEO EDITING</span>
       </footer>
     </main>
   );
