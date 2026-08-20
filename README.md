@@ -1,2 +1,2 @@
-# Vaurel-Website
+# Vaurel
 README
