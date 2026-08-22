@@ -37,7 +37,6 @@ button { font: inherit; }
 }
 .nav-left { display: flex; gap: 30px; align-items: center; }
 .nav-left a, .nav-contact {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: .12em;
@@ -45,6 +44,17 @@ button { font: inherit; }
 }
 .nav-left a:hover, .nav-contact:hover { opacity: .55; }
 .active-link { text-decoration: underline; text-underline-offset: 5px; }
+
+.home-image-full {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  overflow: hidden;
+}
+.home-image-full-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
 .home-hero {
   min-height: calc(100vh - 82px);
@@ -108,15 +118,7 @@ h1 span, h2 span { color: #777; }
 .theme-design { --project-bg: #f3f3f3; --project-fg: #080808; --project-accent: #777; }
 .projects-page .nav { border-color: color-mix(in srgb, var(--project-fg) 18%, transparent); }
 .projects-stage { flex: 1; padding: 5vw 4vw 7vw; }
-
-.project-menu {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  width: 100%;
-  justify-content: center;
-}
-
+.project-menu { display: flex; flex-wrap: wrap; gap: 10px; }
 .project-tab {
   border: 1px solid color-mix(in srgb, var(--project-fg) 25%, transparent);
   background: transparent;
@@ -178,11 +180,6 @@ footer {
 @media (max-width: 600px) {
   .nav { height: 70px; padding: 0 5vw; }
   .nav-left { gap: 13px; }
-  .nav-left a, .nav-contact {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 8px;
-    letter-spacing: .09em;
-  }
   .nav-left a, .nav-contact { font-size: 8px; letter-spacing: .09em; }
   .home-hero { padding: 60px 5vw 70px; }
   .home-copy h1, .inner-hero h1 { font-size: clamp(58px, 18vw, 100px); }
