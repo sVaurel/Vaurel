@@ -1,8 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
-// TODO: replace with your real production domain once you have one
-const siteUrl = "https://vaurel.co";
+const siteUrl = "https://vaurel.vercel.app/";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
