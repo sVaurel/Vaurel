@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://vaurel.co/sitemap.xml",
+    sitemap: "https://vaurel.vercel.app/sitemap.xml",
   };
 }
